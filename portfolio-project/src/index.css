@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+:root {
+  --deep-sea: #1b263b;
+  --white-sea: #caf0f8;
+  --light-sea: #415a77;
+}
+
+.header-container {
+  padding: 25px 0px 25px 25px;
+  font-size: 22px;
+  background-color: var(--deep-sea);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-div {
+  display: flex;
+  gap: 30px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: underline;
+  color: white;
+}
+
+
+.projects-section {
+  width: min(1100px, calc(100% - 48px));
+  margin: 60px auto;
+}
+
+.projects-heading {
+  margin-bottom: 24px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  gap: 24px;
+}
+
+.functional-container {
+  display: flex;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  background: #111;
+  text-align: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.project-name {
+  max-width: 420px;
+  font-size: 20px;
+  line-height: 1.35;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+  text-decoration: underline;
+}
+
+.project-name.description {
+  margin-top: 3px;
+  text-decoration: none;
+}
+
+.project-box {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.text-wrapper {
+  margin-top: auto;
+  width: 100%;
+  background-color: var(--deep-sea);
+  padding: 10px 0px;
+}
+
+.link-wrapper {
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.project-link, .code-link {
+  border: 1px solid var(--white-sea);
+  border-radius: 5px;
+  padding: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: black;
+}
+
+.footer-wrapper {
+  background-color: var(--deep-sea);
+  text-align: center;
+  padding: 15px 0;
+}
+
+.footer-contacts {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+
+@media (max-width: 885px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .right-div {
+    display: none;
+  }
+
+  .header-container {
+    justify-content: center;
+    padding: 25px 0
+  }
+}
