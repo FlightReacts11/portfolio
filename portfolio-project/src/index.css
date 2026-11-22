@@ -147,3 +147,10 @@ a {
     padding: 25px 0
   }
 }
+
+@media (max-width: 400px) {
+  .footer-contacts {
+    display: block;
+    
+  }
+}
